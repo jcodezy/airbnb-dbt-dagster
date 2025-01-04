@@ -16,7 +16,7 @@ The DBT project goes over the essential building blocks of DBT: creating models,
 - Learning how to set up CI/CD or testing in dbt, etc.
 
 ### Project Structure 
-dbt
+- dbt
     - dbt_dagster_project 
         - dbt_dagster_project 
             - assets.py 
