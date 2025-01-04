@@ -23,7 +23,6 @@ dbt
             - constants.py 
             - definitions.py
             - schedules.py 
-
     - dbtlearn 
         - analyses
         - assets 
@@ -41,7 +40,6 @@ dbt
             - Generic and singular tests.
         - dbt_project.yml
         - packages.yml 
-
     - requirements.txt 
 
 
@@ -55,14 +53,14 @@ dbt
     - Your dbt profile should be located in ~/.dbt/profiles.yml 
     - To view your dbt profile, run ```cat ~/.dbt/profiles.yml``` or ```less ~/.dbt/profiles.yml``` 
     - Your ~/.dbt/profiles.yml profile should look like: 
-        dev:
-            account: <YOUR_ACCOUNT>
-            database: AIRBNB
-            password: <YOUR_PASSWORD>
-            role: <YOUR_ROLE>
-            schema: DEV
-            threads: 1
-            type: snowflake
+        - dev:
+            - account: <YOUR_ACCOUNT>
+            - database: AIRBNB
+            - password: <YOUR_PASSWORD>
+            - role: <YOUR_ROLE>
+            - schema: DEV
+            - threads: 1
+            - type: snowflake
 5. Run dbt 
     - ```dbt compile```
     - ```dbt run``` 
@@ -72,6 +70,4 @@ dbt
     - Fill in your dbt project directory and run ```dagster-dbt project scaffold --project-name dbt_dagster_project --dbt-project-dir=<YOUR_PROJ_DIR>```
 
 7. Start Dagster
-```cd dbt_dagster_project
-$env:DAGSTER_DBT_PARSE_PROJECT_ON_LOAD = 1
-dagster dev```
+```cd dbt_dagster_project && $env:DAGSTER_DBT_PARSE_PROJECT_ON_LOAD = 1 && dagster dev```
